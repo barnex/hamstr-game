@@ -24,7 +24,7 @@ impl<T> Index<usize> for Matrix<T> {
 			0 => &self.0,
 			1 => &self.1,
 			2 => &self.2,
-			_ => panic!(format!("Matrix index out of bounds: {}", i)),
+			_ => panic!("Matrix index out of bounds: {}", i),
 		}
 	}
 }
@@ -37,7 +37,7 @@ impl<T> IndexMut<usize> for Matrix<T> {
 			0 => &mut self.0,
 			1 => &mut self.1,
 			2 => &mut self.2,
-			_ => panic!(format!("Matrix index out of bounds: {}", idx)),
+			_ => panic!("Matrix index out of bounds: {}", idx),
 		}
 	}
 }

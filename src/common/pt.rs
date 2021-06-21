@@ -37,7 +37,7 @@ impl ops::Index<usize> for Pt {
 		match i {
 			0 => &self.0,
 			1 => &self.1,
-			_ => panic!(format!("Pt index out of bounds: {}", i)),
+			_ => panic!("Pt index out of bounds: {}", i),
 		}
 	}
 }

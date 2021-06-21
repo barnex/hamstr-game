@@ -1,6 +1,4 @@
-extern crate cpuprofiler;
 extern crate rand;
-use cpuprofiler::PROFILER;
 use flux::editor::prelude::*;
 use flux::game::sdl_interface;
 use std::env;
@@ -19,20 +17,5 @@ fn main() {
 			std::process::exit(1);
 		}
 	};
-
-	start_pprof();
 	sdl_interface::mainloop(&mut ed).expect("initialize SDL");
-	stop_pprof();
-}
-
-fn start_pprof() {
-	PROFILER
-		.lock()
-		.unwrap()
-		.start("./profile.pprof")
-		.expect("start pprof");
-}
-
-fn stop_pprof() {
-	PROFILER.lock().unwrap().stop().expect("stop pprof");
 }

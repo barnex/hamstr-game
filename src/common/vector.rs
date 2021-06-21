@@ -180,7 +180,7 @@ impl<T> Index<usize> for Vector<T> {
 			0 => &self.0,
 			1 => &self.1,
 			2 => &self.2,
-			_ => panic!(format!("Vector index out of bounds: {}", idx)),
+			_ => panic!("Vector index out of bounds: {}", idx),
 		}
 	}
 }
@@ -192,7 +192,7 @@ impl<T> IndexMut<usize> for Vector<T> {
 			0 => &mut self.0,
 			1 => &mut self.1,
 			2 => &mut self.2,
-			_ => panic!(format!("Vector index out of bounds: {}", idx)),
+			_ => panic!("Vector index out of bounds: {}", idx),
 		}
 	}
 }
